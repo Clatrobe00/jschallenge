@@ -32,3 +32,9 @@
 #cat-generator {
     margin-bottom: 10px;
 }
+
+/* Challenge 3 Style */
+
+#flex-box-rps img:hover {
+    box-shadow: 5px 5px 5px rgb(17, 209, 0);
+}
