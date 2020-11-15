@@ -22,3 +22,16 @@ function generateCat () {
     div.appendChild(image);
 }
 
+// Challenge 3: Rock Paper Scissors Game
+
+var rpsArr = ["rock", "paper", "scissors"];
+
+function rpsGame (yourChoice) {
+    var pcMove, ncpMove;
+    var pcMove = yourChoice.id;
+    console.log(pcMove);
+    //ncpMove =
+    //results = decideWinner(pcMove, ncpMove);
+    message = finalMessage(results);
+};
+
