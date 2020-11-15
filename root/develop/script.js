@@ -27,11 +27,22 @@ function generateCat () {
 var rpsArr = ["rock", "paper", "scissors"];
 
 function rpsGame (yourChoice) {
-    var pcMove, ncpMove;
+    //var pcMove, npcMove;
     var pcMove = yourChoice.id;
     console.log(pcMove);
-    //ncpMove =
-    //results = decideWinner(pcMove, ncpMove);
-    message = finalMessage(results);
-};
+    npcMove = rpsArr[randomChoice()];
+    console.log(npcMove);
+    //results = decideWinner(pcMove, npcMove); {}
+    //message = finalMessage(results);
+//    rpsFrontEnd(yourChoice.id, botChoice, message)
+//};
+}
+
+
+function randomChoice () {
+    var randInt = Math.floor(Math.random() * 3);
+    return randInt;
+}
+
+
 
