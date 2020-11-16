@@ -32,16 +32,42 @@ function rpsGame (yourChoice) {
     console.log(pcMove);
     npcMove = rpsArr[randomChoice()];
     console.log(npcMove);
-    //results = decideWinner(pcMove, npcMove); {}
-    //message = finalMessage(results);
+    results = decideWinner(pcMove, npcMove);
+    message = finalMessage(results);
+    console.log(message);
 //    rpsFrontEnd(yourChoice.id, botChoice, message)
 //};
 }
 
 
-function randomChoice () {
+function randomChoice() {
     var randInt = Math.floor(Math.random() * 3);
     return randInt;
+}
+
+function decideWinner(pcMove, npcMove) {
+    var rpsDatabase = {
+        "rock": {"rock": 0.5, "paper": 0, "scissors": 1},
+        "paper": {"rock": 1, "paper": 0.5, "scissors": 0},
+        "scissors": {"rock": 0, "paper": 1, "scissors": 0.5}
+    }
+
+    var yourScore = rpsDatabase[pcMove][npcMove];
+    return yourScore;
+}
+
+function finalMessage(results) {
+    if (results === 0) {
+        message = "You lose!"
+    } 
+    if (results === 0.5) {
+        message = "Draw!"
+    }
+    if (results === 1) {
+        message = "You win!"
+    }
+
+    return message
 }
 
 
