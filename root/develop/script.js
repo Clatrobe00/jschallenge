@@ -58,16 +58,18 @@ function decideWinner(pcMove, npcMove) {
 
 function finalMessage(results) {
     if (results === 0) {
-        message = "You lose!"
+        return {"message": "You lose!", "color": "red"};
     } 
     if (results === 0.5) {
-        message = "Draw!"
+        return {"message": "Draw!", "color": "blue"};
     }
     if (results === 1) {
-        message = "You win!"
-    }
+        return {"message": "You win!", "color": "green"};
+    } 
+}
 
-    return message
+function rpsFrontEnd(pcImgChoice, npcImgChoice, message) {
+    
 }
 
 
