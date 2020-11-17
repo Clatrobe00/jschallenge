@@ -35,8 +35,7 @@ function rpsGame (yourChoice) {
     results = decideWinner(pcMove, npcMove);
     message = finalMessage(results);
     console.log(message);
-//    rpsFrontEnd(yourChoice.id, botChoice, message)
-//};
+    rpsFrontEnd(pcMove, npcMove, message);
 }
 
 
@@ -68,7 +67,27 @@ function finalMessage(results) {
     } 
 }
 
-function rpsFrontEnd(pcImgChoice, npcImgChoice, message) {
+function rpsFrontEnd(pcMove, npcMove, message) {
+    var imageDatabase = {
+        "rock": document.getElementById("rock").src,
+        "paper": document.getElementById("paper").src,
+        "scissors": document.getElementById("scissors").src 
+    };
+
+    document.getElementById("rock").remove();
+    document.getElementById("paper").remove();
+    document.getElementById("scissors").remove();
+
+    var humanDiv = document.createElement("div");
+    var messageDiv = document.createElement("div");
+    var botDiv = document.createElement("div");
+
+    humanDiv.innerHTML = "<img src='" + imageDatabase[pcMove] + "'>";
+    botDiv.innerHTML = "<img src='" + imageDatabase[npcMove] + "'>";
+
+    document.getElementById("flex-box-rps").appendChild(humanDiv);
+    document.getElementById("flex-box-rps").appendChild(botDiv);
+    
     
 }
 
