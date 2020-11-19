@@ -82,10 +82,12 @@ function rpsFrontEnd(pcMove, npcMove, message) {
     var messageDiv = document.createElement("div");
     var botDiv = document.createElement("div");
 
-    humanDiv.innerHTML = "<img src='" + imageDatabase[pcMove] + "'>";
-    botDiv.innerHTML = "<img src='" + imageDatabase[npcMove] + "'>";
+    humanDiv.innerHTML = "<img src='" + imageDatabase[pcMove] + "'height=150px width=150px style='box-shadow: 0px 10px 50px rgba(37, 23, 233, 1'>";
+    messageDiv.innerHTML = "<h1 style = 'color:" + message['color'] + "; font-size: 50px; padding: 30px'>" + message['message'] + "</h1>";
+    botDiv.innerHTML = "<img src='" + imageDatabase[npcMove] + "'height=150px width=150px style='box-shadow: 0px 10px 50px rgba(189, 23, 10, 1'>";
 
     document.getElementById("flex-box-rps").appendChild(humanDiv);
+    document.getElementById("flex-box-rps").appendChild(messageDiv);
     document.getElementById("flex-box-rps").appendChild(botDiv);
     
     
