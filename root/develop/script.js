@@ -27,7 +27,6 @@ function generateCat () {
 var rpsArr = ["rock", "paper", "scissors"];
 
 function rpsGame (yourChoice) {
-    //var pcMove, npcMove;
     var pcMove = yourChoice.id;
     console.log(pcMove);
     npcMove = rpsArr[randomChoice()];
