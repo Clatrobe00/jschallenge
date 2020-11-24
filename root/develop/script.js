@@ -88,9 +88,17 @@ function rpsFrontEnd(pcMove, npcMove, message) {
     document.getElementById("flex-box-rps").appendChild(humanDiv);
     document.getElementById("flex-box-rps").appendChild(messageDiv);
     document.getElementById("flex-box-rps").appendChild(botDiv);
-    
-    
 }
 
+// Challenge 4: Change the button colors
+
+function buttonColorChange(buttonChoice) {
+    var buttonColor = buttonChoice;
+    var button = document.querySelectorAll('button');
+    console.log(button);
+    for(i = 0; i < button.length; i++) {
+        button[i].setAttribute('class') = buttonColor; 
+    }
+}
 
 
