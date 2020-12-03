@@ -1,5 +1,3 @@
-/* Challenge 1 style and flex box styles*/
-
 .container {
     border: 1px solid black;
     margin: 0 auto;
@@ -23,8 +21,6 @@
     align-items: center;
 }
 
-/* Challenge 2 Style */
-
 #flex-box-cat-gen img {
     box-shadow: 0px 10px 50px rgba(0, 0, 0.7);
     margin: 10px;
@@ -33,8 +29,6 @@
 #cat-generator {
     margin-bottom: 10px;
 }
-
-/* Challenge 3 Style */
 
 #flex-box-rps img:hover {
     box-shadow: 0px 10px 50px rgb(17, 209, 0);

@@ -92,13 +92,42 @@ function rpsFrontEnd(pcMove, npcMove, message) {
 
 // Challenge 4: Change the button colors
 
-function buttonColorChange(buttonChoice) {
-    var buttonColor = buttonChoice;
-    var button = document.querySelectorAll('button');
-    console.log(button);
-    for(i = 0; i < button.length; i++) {
-        button[i].setAttribute('class') = buttonColor; 
-    }
+var allButtons = document.querySelectorAll('button');
+
+var copyAllButtons = [];
+
+for (let i = 0; i < allButtons.length; i++) {
+    copyAllButtons.push(allButtons[i].classList[2]);
 }
 
+function buttonColorChange(buttonChoice) {
+    if (buttonChoice.id === 'btn-success' || buttonChoice.id === 'btn-primary' || buttonChoice.id === 'btn-danger') {
+        setButtonColor(buttonChoice.id);
+    }
+    if (buttonChoice.id === 'random') {
+        randomButtonColor();
+    }
+    if (buttonChoice.id === 'reset') {
+        buttonReset();
+    }
+    
+}
+
+function setButtonColor (colorChoice) {
+    console.log(colorChoice);
+    allButtons.forEach((button) => {
+        console.log(button.classList[1]);
+        button.className = ''
+        button.classList.add('btn');
+        button.classList.add(colorChoice);
+    });
+}
+
+function randomButtonColor () {
+    console.log('random');
+}
+
+function buttonReset () {
+    console.log('reset');
+}
 
