@@ -126,7 +126,14 @@ function setButtonColor (colorChoice) {
 }
 
 function randomButtonColor () {
+    var randomClass = ['btn-danger', 'btn-success', 'btn-primary']
     console.log('random');
+    allButtons.forEach((button) => {
+        button.className = ''
+        button.classList.add('btn');
+        button.classList.add(randomClass[Math.floor(Math.random() * 3)]);    
+    })
+    
 }
 
 function buttonReset () {
