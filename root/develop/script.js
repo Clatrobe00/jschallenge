@@ -97,8 +97,10 @@ var allButtons = document.querySelectorAll('button');
 var copyAllButtons = [];
 
 for (let i = 0; i < allButtons.length; i++) {
-    copyAllButtons.push(allButtons[i].classList[2]);
+    copyAllButtons.push(allButtons[i].classList[1]);
+    console.log(copyAllButtons);
 }
+
 
 function buttonColorChange(buttonChoice) {
     if (buttonChoice.id === 'btn-success' || buttonChoice.id === 'btn-primary' || buttonChoice.id === 'btn-danger') {
@@ -128,6 +130,11 @@ function randomButtonColor () {
 }
 
 function buttonReset () {
-    console.log('reset');
+    for (let i = 0; i < allButtons.length; i++) {
+        allButtons[i].className = ''
+        allButtons[i].classList.add('btn');
+        allButtons[i].classList.add(copyAllButtons[i]);
+        
+    }
 }
 
